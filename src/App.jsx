@@ -2,6 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import Clock from './Clock'; // Importa el módulo Clock
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +33,7 @@ function App() {
         <button onClick={resetCount}>
           Reiniciar contador
         </button>
+        <Clock /> {/* Agrega el componente Clock para mostrar la hora */}
         <p>
           Edita el archivo <code>src/App.jsx</code> y guarda para probar la Recarga Rápida del Módulo (HMR).
         </p>
