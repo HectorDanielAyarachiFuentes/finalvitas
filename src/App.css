@@ -40,3 +40,68 @@
 .read-the-docs {
   color: #888;
 }
+/* Estilos generales */
+.app-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  max-width: 100%;
+}
+
+.logo.react {
+  width: 80px;
+  max-width: 100%;
+}
+
+.card {
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .logo {
+    width: 60px;
+  }
+
+  .logo.react {
+    width: 50px;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+/* Estilos para el carrusel de imágenes */
+.image-carousel {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-container {
+  max-width: 300px; /* Establece el ancho máximo para las imágenes */
+  margin: 0 auto; /* Centra el contenedor de la imagen */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation-buttons {
+  margin-top: 10px;
+}
+
+/* Otros estilos existentes */
+/* ... */

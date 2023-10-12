@@ -1,8 +1,10 @@
-import { useState } from 'react';
+// App.js
+import React, { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import viteLogo from './assets/vite.svg';
 import './App.css';
-import Clock from './Clock'; // Importa el módulo Clock
+import Clock from './Clock';
+import ImageCarousel from './ImageCarousel';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,9 +17,24 @@ function App() {
     setCount(0);
   };
 
+  const imageArray = [
+    {
+      url: 'https://example.com/image1.jpg',
+      alt: 'Imagen 1',
+    },
+    {
+      url: 'https://example.com/image2.jpg',
+      alt: 'Imagen 2',
+    },
+    {
+      url: 'https://example.com/image3.jpg',
+      alt: 'Imagen 3',
+    },
+  ];
+
   return (
-    <>
-      <div>
+    <div className="app-container">
+      <div className="logos-container">
         <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
           <img src={viteLogo} className="logo" alt="Logotipo de Vite" />
         </a>
@@ -33,7 +50,8 @@ function App() {
         <button onClick={resetCount}>
           Reiniciar contador
         </button>
-        <Clock /> {/* Agrega el componente Clock para mostrar la hora */}
+        <Clock />
+        <ImageCarousel images={imageArray} />
         <p>
           Edita el archivo <code>src/App.jsx</code> y guarda para probar la Recarga Rápida del Módulo (HMR).
         </p>
@@ -41,7 +59,7 @@ function App() {
       <p className="read-the-docs">
         Haz clic en los logotipos de Vite y React para obtener más información.
       </p>
-    </>
+    </div>
   );
 }
 
